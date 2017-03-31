@@ -6,7 +6,7 @@ import glob
 def resize(files):
  for file in files:
   file = file.strip("Source\\")
-  args = ['magick.exe', 'convert','./Source/' + file,'-resize', '200x200', './Result/' + file.replace(".jpg","_edit.jpg")]
+  args = ['convert.exe','./Source/' + file,'-resize', '200x200', './Result/' + file.replace(".jpg","_edit.jpg")]
   subprocess.call(args)
 
 
